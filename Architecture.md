@@ -1,5 +1,5 @@
 # Architecture of usegalaxy.org.au
 
-## General setup
+## Proposed Architecture
 
-## 
+![Architecture.png](images/Architecture.png)
