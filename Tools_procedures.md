@@ -28,3 +28,4 @@ Old conf files will be kept as per Mike's procedure.
     * Test data - get requesting user to supply some test data (unless it exists in the toolshed), then send them output of tool run with data for them to check before we install it on main.
     * Which project is it for?
     * Can it be incoporated into a workflow and are there already alternatives to this tool?
+    * Possible development of a web form for tool installations.

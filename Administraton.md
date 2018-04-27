@@ -38,3 +38,11 @@
 * CVMFS for most reference indices.
 * Come up with a community policy for handling reference indices and the CVMFS with usegalaxy.eu staff and usegalaxy.org staff.
 * Gareth, Simon, Derek and Igor
+* Come up with a policy for handling local reference data installations
+
+### Data Libraries
+
+* How should we handle data like this?
+* Tutorial input data should definitely be in data libraries.
+* GATK stuff.
+* Other useful data such as annotated reference data.
