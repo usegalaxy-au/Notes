@@ -5,7 +5,7 @@
 ### System administration:
 
 * Primarily Derek.
-* Backup would be Simon and Igor.
+* Backup would be Simon and Nuwan.
 
 ### Tools
 
