@@ -1,11 +1,21 @@
 # Administration details
 
+## Number one policy!
+
+Do nothing on any Friday!
+
 ## Responsibilities
 
 ### System administration:
 
+#### Galaxy server/db server/workers
 * Primarily Derek.
 * Backup would be Simon and Nuwan.
+
+#### CVMFS tier 1 server(s)
+* Nuwan
+* Simon and Derek as backups.
+
 
 ### Tools
 
@@ -18,7 +28,7 @@
 #### Tool installations
 
 * Primarily Simon.
-* Backup Igor, Derek.
+* Backup Nuwan, Derek.
 * Follow tool installation procedure.
 
 #### Tool updates
@@ -37,7 +47,7 @@
 
 * CVMFS for most reference indices.
 * Come up with a community policy for handling reference indices and the CVMFS with usegalaxy.eu staff and usegalaxy.org staff.
-* Gareth, Simon, Derek and Igor
+* Nuwan, Gareth, Simon, Derek and Igor
 * Come up with a policy for handling local reference data installations
 
 ### Data Libraries
