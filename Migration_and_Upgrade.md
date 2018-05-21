@@ -7,8 +7,8 @@ A number of important tasks need to be completed prior to the upgrade.
 * Update TTL in DNS to 5 minutes to allow speedy change over of DNS as the new virtual machine will have a different IP address. [DNB 18-05-2018 Done]
 * Modify landing page for cloudman to contain outage information in a message box that's always visible to the user so that when galaxy is down users are informed. As the migration will take some time.  We estimate about an hour. https://usegalaxy.org.au/errdoc/outage_index.html [DNB 21-05-2018 Done]
 * Sort out Email strategy for new usegalaxy.org.au server [DNB 18-05-2018 Done]
-* Ensure SSL certs will work on new server.
-* Make sure job_conf.xml file contains rules for tool versions on new server.
+* Ensure SSL certs will work on new server. [DNB - Will just deploy new certs on the new server after DNS changes]
+* Make sure job_conf.xml file contains rules for tool versions on new server. [DNB 22-05-2018 Done]
 
 ## Upgrade Steps
 These steps need to be performed in the following order:
