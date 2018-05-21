@@ -11,13 +11,16 @@ A number of important tasks need to be completed prior to the upgrade.
 
 ## Upgrade Steps
 These steps need to be performed in the following order:
-* Update galaxy outage page via symlink: ```cd /usr/share/nginx/html/errdoc && mv cm_502.html cm_502.html.back && ln -s outage_index.html cm_502.html```
+* Update galaxy outage page via symlink: 
+  * ```cd /usr/share/nginx/html/errdoc && mv cm_502.html cm_502.html.back && ln -s outage_index.html cm_502.html```
 * Shutdown services FTP server, Galaxy and Reports services, on usegalaxy.org.au and galaxy-aust.genome.edu.au
 * Dump the Galaxy database on usegalaxy.org.au and place on the galaxy partition and then shutdown the database.
+  * ```pg_dump -p 5930 galaxy >/mnt/galaxy/galaxy.sql```
 * Unmount the Galaxy-Volume on usegalaxy.org.au and remount on galaxy-aust.genome.edu.au under /mnt/new_galaxy
 * Move all files and folders under /mnt/new_galaxy to /mnt/new_galaxy/OLD_DATA
-* Rsync all files from /mnt/galaxy to /mnt/new_galaxy
+* Rsync all files from /mnt/galaxy to /mnt/new_galaxy (rm the files directory - maybe do a du first to check it's the right one)
 * Drop Galaxy database on galaxy-aust.genome.edu.au and restore from copy on /mnt/new_galaxy
+  * ```dropdb -p 5950 galaxy;createdb -p 5950 galaxy;```
 * Replace /mnt/new_galaxy/files with /mnt/new_galaxy/OLD_DATA/files
 * Ensure that /mnt/new_galaxy/galaxy-app/config/job_conf.xml contains memory limits see /mnt/new_galaxy/OLD_DATA/galaxy-app/config/job_conf.xml
 * Edit persistent_data-current.yaml on usegalaxy.org.au (under /mnt/cm) and replace volume vol-32789b6c with volume vol-00003eca and upload this to cm-362518089830e0a03ef6c62f2fd9f2b8
@@ -29,6 +32,7 @@ After the upgrade as a precaution do the following:
 * Remove cloudman.conf from /etc/init on the old usegalaxy.org.au
 * Change the DNS record for usegalaxy.org.au to point to galaxy-aust.genome.edu.au
 * Wait for DNS to filter through and then update SSL cert on new usegalaxy.org.au
+  * certbot certonly --cert-name galaxy-aust.genome.edu.au -d galaxy-aust.genome.edu.au,usegalaxy.org.au
 * Make sure cloudman is located on SSL and not http
 * Start Galaxy.
 * Notify users.
