@@ -6,11 +6,13 @@ The existing Galaxy service on usegalaxy.org.au will be migrated to a new virtua
 A number of important tasks need to be completed prior to the upgrade.
 * Update TTL in DNS to 5 minutes to allow speedy change over of DNS as the new virtual machine will have a different IP address. [DNB 18-05-2018 Done]
 * Modify landing page for cloudman to contain outage information in a message box that's always visible to the user so that when galaxy is down users are informed. As the migration will take some time.  We estimate about an hour. https://usegalaxy.org.au/errdoc/outage_index.html [DNB 21-05-2018 Done]
-* Sort out Email strategy for new usegalaxy.org.au server [DNB 18-05-2018]
+* Sort out Email strategy for new usegalaxy.org.au server [DNB 18-05-2018 Done]
 * Ensure SSL certs will work on new server.
 
 ## Upgrade Steps
 These steps need to be performed in the following order:
+* Update galaxy outage page via symlink: 
+```cd /usr/share/nginx/html/errdoc && mv cm_502.html cm_502.html.back && ln -s outage_index.html cm_502.html```
 * Shutdown services FTP server, Galaxy and Reports services, on usegalaxy.org.au and galaxy-aust.genome.edu.au
 * Dump the Galaxy database on usegalaxy.org.au and place on the galaxy partition and then shutdown the database.
 * Unmount the Galaxy-Volume on usegalaxy.org.au and remount on galaxy-aust.genome.edu.au under /mnt/new_galaxy
