@@ -35,4 +35,3 @@ After the upgrade as a precaution do the following:
 * Make sure cloudman is located on SSL and not http
 * Start Galaxy.
 * Notify users.
-
