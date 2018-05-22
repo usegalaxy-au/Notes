@@ -42,5 +42,5 @@ After the upgrade as a precaution do the following:
 Issues encounted along the way:
 * Web service on old server initially refused to display the announcement page. Error was too many redirects. This was fixed by using a direct reference in the nginx configuration.
 * Galaxy file system on old server refused to unmount even though all processes listed in lsof had been killed. This was resolved by forcing the filesystem to unmount by detaching the volume.
-* Copying the tools from the new servers volume to the old galaxy-qld volume took more than half an hour.
+* Copying the tools from the new server's volume to the old galaxy-qld volume took more than half an hour mainly due to conda (I used a tar pipe to transfer these to maintain hard links).
 * Galaxy has changed it's user id in the latest GVL. This is not reflected in the proftp configuration. The data files from the old server needed ownership changed.
