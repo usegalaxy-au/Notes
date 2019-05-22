@@ -290,7 +290,7 @@ Note: To use BWA, you need to first index the genome with `bwa index'.
       first. Please `man ./bwa.1' for the manual.
 ```
 
-## 4.2 Remove a tool
+### 4.2 Remove a tool
 
 To remove a tool is simple. Just use the `conda remove` instruction.
 
@@ -312,7 +312,7 @@ sudo apt install samtools
 ```
 It's not there anymore.. Cool..
 
-## 4.3 Install a particular **version** of a tool.
+### 4.3 Install a particular **version** of a tool.
 
 Last time we installed samtools we got version 1.9 but we really wanted version 1.8. We can install version 1.8 pretty easily. We just tell Conda what version we want when we install it.
 
@@ -336,7 +336,7 @@ Copyright (C) 2018 Genome Research Ltd.
 ```
 Cool.
 
-## 4.4 Update a tool
+### 4.4 Update a tool
 
 Sometimes we want to upgrade a tool that is already installed. We can do this by using the `conda update <package-name>` command.
 
@@ -357,7 +357,7 @@ Copyright (C) 2018 Genome Research Ltd.
 
 Simples.
 
-## 4.5 Find out what tools are installed.
+### 4.5 Find out what tools are installed.
 
 It's pretty easy, we just use the `conda list` command. It will tell you what is installed, which versions, build numbers and which channel it came from.
 
@@ -427,7 +427,7 @@ Lets install a tool called `mlst` into it's own environment. It has a lot of dep
 
 First thing we need to do is create an *environment* for it.
 
-## 6.1 Create a conda environment
+### 6.1 Create a conda environment
 
 We can create an environment for mlst as follows:
 
@@ -511,7 +511,7 @@ HOMEPAGE
 
 We can manipulate what is installed in this environment in the same manner we did for the `(base)` environment.
 
-## 6.2 Create an environment and install tools into it at the same time
+### 6.2 Create an environment and install tools into it at the same time
 
 The above was a few too many steps and as computer scientists we like typing less.. So..
 
