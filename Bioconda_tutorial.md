@@ -515,7 +515,7 @@ We can manipulate what is installed in this environment in the same manner we di
 
 The above was a few too many steps and as computer scientists we like typing less.. So..
 
-Lets create a new environment for version 1.8 of samtools and install it too.
+Lets create a new environment for version 1.8 of samtools as well as BWA and install them too.
 
 We can do it all with one command.
 
@@ -528,10 +528,10 @@ First we need to exit the `(mlst_env)` environment and go back to the `(base)` e
 Now we can create our new environment for samtools and install it.
 
 ```
-(base) >$ conda create -n samtools_1_8 samtools==1.8
+(base) >$ conda create -n bwa_samtools_1_8 samtools==1.8 bwa
 ```
 
-This command will create an environment called `samtools_1_8` and then install samtools version 1.8 into it.
+This command will create an environment called `bwa_samtools_1_8` and then install samtools version 1.8 and a compatible version of bwa into it.
 
 Cool huh?
 
