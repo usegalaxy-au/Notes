@@ -510,3 +510,32 @@ HOMEPAGE
 ```
 
 We can manipulate what is installed in this environment in the same manner we did for the `(base)` environment.
+
+## 6.2 Create an environment and install tools into it at the same time
+
+The above was a few too many steps and as computer scientists we like typing less.. So..
+
+Lets create a new environment for version 1.8 of samtools and install it too.
+
+We can do it all with one command.
+
+First we need to exit the `(mlst_env)` environment and go back to the `(base)` environment.
+
+```
+(mlst_env) >$ conda deactivate
+```
+
+Now we can create our new environment for samtools and install it.
+
+```
+(base) >$ conda create -n samtools_1_8 samtools==1.8
+```
+
+This command will create an environment called `samtools_1_8` and then install samtools version 1.8 into it.
+
+Cool huh?
+
+
+## The End.
+
+Well, that's it. Hopefully you now understand how to use conda and conda environments to install and use all of your favourite tools!
