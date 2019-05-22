@@ -363,7 +363,6 @@ It's pretty easy, we just use the `conda list` command. It will tell you what is
 
 ```
 (base) >$ conda list
-conda list
 # packages in environment at /home/ubuntu/miniconda3:
 #
 # Name                    Version                   Build  Channel
